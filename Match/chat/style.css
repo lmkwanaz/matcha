@@ -1,0 +1,74 @@
+* CSS Document */
+body {
+    font:12px arial;
+    color: #222;
+    text-align:center;
+    padding:35px; }
+  
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:12px arial; }
+  
+a {
+    color:#0000FF;
+    text-decoration:none; }
+  
+    a:hover { text-decoration:underline; }
+  
+#wrapper, #loginform {
+    margin:0 auto;
+    padding-bottom:30px;
+    background:#F1B1CD;
+    height: 500px;
+    width:700px;
+    border:1px solid rgba(172, 216, 240, 0.43); }
+  
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:rgba(247, 242, 244, 0.94);
+    height:400px;
+    width:490px;
+    border:1px solid rgba(240, 153, 166, 0.56);
+    overflow:auto; }
+  
+#usermsg {
+    width:420px;
+    margin-left: 100px;
+    border:1px solid rgba(197, 101, 160, 0.33); }
+  
+#submit { width: 60px; }
+  
+.error { color: #ff0000; }
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { float:left; }
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color:black;
+    clear: left;
+    text-align: center;
+}
+body {
+    background-color: rgb(248, 227, 243);
+    background-size: cover;
+}
+
+.logout {
+    margin-bottom: 50px;
+    font-size: 17px;
+    background: -webkit-linear-gradient(rgb(219, 110, 130), black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: right;
+    border-radius: 5px;
+}

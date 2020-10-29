@@ -168,9 +168,6 @@
         echo "Database failed".'<br>'.$e->getMessage();
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     // $e_username = 'lmkwanaz';
     // $e_profilepic = 'images/efemale.jpeg';
     // $e_postId = 1;
@@ -210,12 +207,12 @@
     //  $sql->execute([$e_username, $e_latitude, $e_longitude, $e_show]);
 
 
-    //  $e_username = 'nngwenya';
+    //  $e_username = 'skhuboni';
     // $e_profilepic = 'images/dog.webp';
     // $e_postId = 1;
-    // $e_firstname = 'Gwen';
-    // $e_lastname = 'Ngwenya';
-    // $e_email = 'gwen@gmail.com';
+    // $e_firstname = 'sindiswa';
+    // $e_lastname = 'khuboni';
+    // $e_email = 'ndisi@gmail.com';
     // $e_passwd = 'Password@1';
     // $e_hashed = password_hash($e_passwd, PASSWORD_DEFAULT);
     // $e_token = '1';
@@ -247,127 +244,44 @@
     //  $sql->execute([$e_username, $e_postId]);
     //  $sql = $db->prepare('INSERT IGNORE INTO geolocation (username, lati, `long`, `show`) VALUES (?, ?, ?, ?);');
     //  $sql->execute([$e_username, $e_latitude, $e_longitude, $e_show]);
-=======
->>>>>>> e6397eaf9603fee2926c902b76db45818e981bc4
-    $e_username = 'lmkwanaz';
-    $e_profilepic = 'images/efemale.jpeg';
-    $e_postId = 1;
-    $e_firstname = 'Lwandile';
-    $e_lastname = 'Mkwanazi';
-    $e_email = 'lrmkwanazi38@gmail.com';
-    $e_passwd = 'Password@1';
-    $e_hashed = password_hash($e_passwd, PASSWORD_DEFAULT);
-    $e_token = '1';
-    $e_gender = 'Male';
-    $e_age = 21;
-    $e_sexuality = 'women';
-    $e_biography = 'I am a developer';
-    $e_interests = 'music';
-    $e_status = 'greatness of god';
-    $e_lastseen = '0';
-    $e_latitude = '-27.862744';
-    $e_longitude = '27.831237';
-    $e_no_of_pictures = '2';
-    $e_show = '1';
-    $e_city = 'johannesburg';
-    $e_fame_rating= '20';
 
-    $sql = $db->prepare('INSERT IGNORE INTO user (firstname, lastname, username, email, password, lastseen, token, no_of_pictures) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
-     $sql->execute([$e_firstname, $e_lastname, $e_username, $e_email, $e_hashed, $e_lastseen, $e_token, $e_no_of_pictures]);
-     $sql = $db->prepare('INSERT IGNORE INTO user_profile (gender, biography, age, sexuality, city, status) VALUES (?, ?, ?, ?, ?, ?);');
-     $sql->execute([$e_gender, $e_biography, $e_age, $e_sexuality, $e_city, $e_status]);
-     $sql = $db->prepare('INSERT IGNORE INTO views (username, fame_rating) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_fame_rating]);
-     $sql = $db->prepare('INSERT IGNORE INTO interests (username, interest) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_interests]);
-     $sql = $db->prepare('INSERT IGNORE INTO pictures (username, image_name) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_profilepic]);
-     $sql = $db->prepare('INSERT IGNORE INTO profile_pic (username, post_id) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_postId]);
-     $sql = $db->prepare('INSERT IGNORE INTO geolocation (username, lati, `long`, `show`) VALUES (?, ?, ?, ?);');
-     $sql->execute([$e_username, $e_latitude, $e_longitude, $e_show]);
+    //  $e_username = 'ssibeko';
+    // $e_profilepic = 'images/dog.webp';
+    // $e_postId = 1;
+    // $e_firstname = 'siyabonga';
+    // $e_lastname = 'sibeko';
+    // $e_email = 'sya@gmail.com';
+    // $e_passwd = 'Password@1';
+    // $e_hashed = password_hash($e_passwd, PASSWORD_DEFAULT);
+    // $e_token = '1';
+    // $e_gender = 'Male';
+    // $e_age = 20;
+    // $e_sexuality = 'female';
+    // $e_biography = 'I am a developer';
+    // $e_interests = 'soccer player';
+    // $e_status = 'greatness of god';
+    // $e_lastseen = '0';
+    // $e_latitude = '-28.862744';
+    // $e_longitude = '28.831237';
+    // $e_no_of_pictures = '2';
+    // $e_show = '1';
+    // $e_city = 'johannesburg';
+    // $e_fame_rating= '20';
 
-
-     $e_username = 'nngwenya';
-    $e_profilepic = 'images/dog.webp';
-    $e_postId = 1;
-    $e_firstname = 'Gwen';
-    $e_lastname = 'Ngwenya';
-    $e_email = 'gwen@gmail.com';
-    $e_passwd = 'Password@1';
-    $e_hashed = password_hash($e_passwd, PASSWORD_DEFAULT);
-    $e_token = '1';
-    $e_gender = 'Female';
-    $e_age = 21;
-    $e_sexuality = 'man';
-    $e_biography = 'I am a developer';
-    $e_interests = 'actress';
-    $e_status = 'greatness of god';
-    $e_lastseen = '0';
-    $e_latitude = '-28.862744';
-    $e_longitude = '28.831237';
-    $e_no_of_pictures = '2';
-    $e_show = '1';
-    $e_city = 'johannesburg';
-    $e_fame_rating= '20';
-
-    $sql = $db->prepare('INSERT IGNORE INTO user (firstname, lastname, username, email, password, lastseen, token, no_of_pictures) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
-     $sql->execute([$e_firstname, $e_lastname, $e_username, $e_email, $e_hashed, $e_lastseen, $e_token, $e_no_of_pictures]);
-     $sql = $db->prepare('INSERT IGNORE INTO user_profile (gender, biography, age, sexuality, city, status) VALUES (?, ?, ?, ?, ?, ?);');
-     $sql->execute([$e_gender, $e_biography, $e_age, $e_sexuality, $e_city, $e_status]);
-     $sql = $db->prepare('INSERT IGNORE INTO views (username, fame_rating) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_fame_rating]);
-     $sql = $db->prepare('INSERT IGNORE INTO interests (username, interest) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_interests]);
-     $sql = $db->prepare('INSERT IGNORE INTO pictures (username, image_name) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_profilepic]);
-     $sql = $db->prepare('INSERT IGNORE INTO profile_pic (username, post_id) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_postId]);
-     $sql = $db->prepare('INSERT IGNORE INTO geolocation (username, lati, `long`, `show`) VALUES (?, ?, ?, ?);');
-     $sql->execute([$e_username, $e_latitude, $e_longitude, $e_show]);
-<<<<<<< HEAD
-
-     $e_username = 'ssibeko';
-    $e_profilepic = 'images/dog.webp';
-    $e_postId = 1;
-    $e_firstname = 'siyabonga';
-    $e_lastname = 'sibeko';
-    $e_email = 'sya@gmail.com';
-    $e_passwd = 'Password@1';
-    $e_hashed = password_hash($e_passwd, PASSWORD_DEFAULT);
-    $e_token = '1';
-    $e_gender = 'Male';
-    $e_age = 20;
-    $e_sexuality = 'female';
-    $e_biography = 'I am a developer';
-    $e_interests = 'soccer player';
-    $e_status = 'greatness of god';
-    $e_lastseen = '0';
-    $e_latitude = '-28.862744';
-    $e_longitude = '28.831237';
-    $e_no_of_pictures = '2';
-    $e_show = '1';
-    $e_city = 'johannesburg';
-    $e_fame_rating= '20';
-
-    $sql = $db->prepare('INSERT IGNORE INTO user (firstname, lastname, username, email, password, lastseen, token, no_of_pictures) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
-     $sql->execute([$e_firstname, $e_lastname, $e_username, $e_email, $e_hashed, $e_lastseen, $e_token, $e_no_of_pictures]);
-     $sql = $db->prepare('INSERT IGNORE INTO user_profile (gender, biography, age, sexuality, city, status) VALUES (?, ?, ?, ?, ?, ?);');
-     $sql->execute([$e_gender, $e_biography, $e_age, $e_sexuality, $e_city, $e_status]);
-     $sql = $db->prepare('INSERT IGNORE INTO views (username, fame_rating) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_fame_rating]);
-     $sql = $db->prepare('INSERT IGNORE INTO interests (username, interest) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_interests]);
-     $sql = $db->prepare('INSERT IGNORE INTO pictures (username, image_name) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_profilepic]);
-     $sql = $db->prepare('INSERT IGNORE INTO profile_pic (username, post_id) VALUES (?, ?);');
-     $sql->execute([$e_username, $e_postId]);
-     $sql = $db->prepare('INSERT IGNORE INTO geolocation (username, lati, `long`, `show`) VALUES (?, ?, ?, ?);');
-     $sql->execute([$e_username, $e_latitude, $e_longitude, $e_show]);
-=======
->>>>>>> b1989968c65b18b4e48b69c37927436e71b1bc61
->>>>>>> e6397eaf9603fee2926c902b76db45818e981bc4
-
+    // $sql = $db->prepare('INSERT IGNORE INTO user (firstname, lastname, username, email, password, lastseen, token, no_of_pictures) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
+    //  $sql->execute([$e_firstname, $e_lastname, $e_username, $e_email, $e_hashed, $e_lastseen, $e_token, $e_no_of_pictures]);
+    //  $sql = $db->prepare('INSERT IGNORE INTO user_profile (gender, biography, age, sexuality, city, status) VALUES (?, ?, ?, ?, ?, ?);');
+    //  $sql->execute([$e_gender, $e_biography, $e_age, $e_sexuality, $e_city, $e_status]);
+    //  $sql = $db->prepare('INSERT IGNORE INTO views (username, fame_rating) VALUES (?, ?);');
+    //  $sql->execute([$e_username, $e_fame_rating]);
+    //  $sql = $db->prepare('INSERT IGNORE INTO interests (username, interest) VALUES (?, ?);');
+    //  $sql->execute([$e_username, $e_interests]);
+    //  $sql = $db->prepare('INSERT IGNORE INTO pictures (username, image_name) VALUES (?, ?);');
+    //  $sql->execute([$e_username, $e_profilepic]);
+    //  $sql = $db->prepare('INSERT IGNORE INTO profile_pic (username, post_id) VALUES (?, ?);');
+    //  $sql->execute([$e_username, $e_postId]);
+    //  $sql = $db->prepare('INSERT IGNORE INTO geolocation (username, lati, `long`, `show`) VALUES (?, ?, ?, ?);');
+    //  $sql->execute([$e_username, $e_latitude, $e_longitude, $e_show]);
      
      
 ?>

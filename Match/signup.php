@@ -11,20 +11,17 @@ $db = new PDO($server, $root, $password);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 function check_emails($db, $email)
 {
-    $sql = "SELECT * FROM user";
-    try
-    {
-        foreach($db->prepare($sql) as $row)
-        {
-            if ($email == $row['email'])
-                return (TRUE);
-        }
+    $sql = "SELECT * FROM user where email = :email";
+    $stmt = $db->prepare($sql);
+    $stmt->bindparam(':email', $email);
+    $stmt->execute();
+    $result = $stmt->fetchall();
+    
+    // var_dump($result);
+    //die();
+    if(!count($result) == 0){
+        return (TRUE);
     }
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }
-    return (FALSE);
 }
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $headers = isset($_POST['headers']) ? $_POST['headers'] : '';
@@ -37,9 +34,12 @@ function check_emails($db, $email)
     $url = "//{$_SERVER['HTTP_HOST']}{$us}";
 
     if (isset($_POST['signup'])){
+        
+        if (check_emails($db, $_POST['email'])){
+            
+            $result = "<p style='padding: 20px; color: red;'>The email already exist. Please use anothere on.</p>";
 
-        if (check_emails($db, $_POST['email']) === TRUE)
-        $result = "<p style='padding: 20px; color: red;'>The email already exist. Please use anothere on.</p>";
+        }
     else{
 
         $form_errors = array();

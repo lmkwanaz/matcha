@@ -144,7 +144,7 @@ if (isset($_POST['save']) && isset($_SESSION['username'])){
 </form><br>
 
 
-<form action="interest.php" method="post" name="myform">
+<form action="myaccount.php" method="post" name="myform">
   <select name="interest" id="interest">
   <option value="">Select Interest</option>
     <option type="hidden" value="cooking">COOKING</option>

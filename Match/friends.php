@@ -130,7 +130,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 catch (PDOException $e)
 {
-    echo"Error Message From Friends.php";
+    echo"Error! Message From Friends.php";
 }
 
 try{
